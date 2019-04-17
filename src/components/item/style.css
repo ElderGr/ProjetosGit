@@ -1,0 +1,34 @@
+.items{
+    display: flex;
+    padding: 2.5% 2%;
+    margin: 1% 0%;
+    border: solid 0.1px rgb(221, 220, 220);
+    text-align: center;
+    background-color: rgb(253, 253, 253);
+}
+
+.items:hover{
+    background-color: rgb(56, 131, 201);
+    color: #fff;
+}
+
+.items h2{
+    font-size: 14pt;
+    width: 20%;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.items div{
+    padding: 0 5%;
+    width: 50%;
+    word-wrap: break-word;
+    text-align: center;
+
+}
+
+.items a{
+    text-decoration: none;
+    color: rgb(0, 0, 252);
+    width: 20%;
+}
