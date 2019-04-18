@@ -1,0 +1,16 @@
+.link{
+    text-decoration: none;
+    color: #fff;
+    width: 20%;
+    background-color: rgb(152, 152, 184);
+    height: 100%;
+    padding: 2% 0;
+    border-radius: 8px;
+    box-shadow: 2px 3.5px rgba(0,0,0, 0.6);
+    font-weight: bold;
+    border: solid 0.5px rgba(98, 98, 133, 0.4);
+}
+
+.link:hover{
+    background-color: rgb(119, 119, 143);
+}

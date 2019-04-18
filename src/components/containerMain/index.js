@@ -11,30 +11,42 @@ export default class Container extends Component{
         super();
         
         this.state = {
-            persons: []
+            projects: [],
+            perfilItems: []
         }
     }
 
     async componentDidMount(){
-        axios.get('https://api.github.com/users/ElderGr/repos')
+        if(this.props.tipo == 'projetos'){
+            axios.get('https://api.github.com/users/ElderGr/repos')
+                .then(res =>{
+                    const projects = res.data;
+                    this.setState({ projects });   
+            });
+        }else{
+            axios.get('https://api.github.com/users/ElderGr')
             .then(res =>{
-                   const persons = res.data;
-                   this.setState({ persons });   
-        });
-    }
-
-    inserirItem = event =>{
-        // return (
-            {this.state.persons.map( person => <Item key={person.id} projeto={person.name} desc={person.description} ></Item> )} 
-        // )
+                const perfilItems = res.data;
+                this.setState({ perfilItems });  
+                console.log(perfilItems); 
+            });
+        }
     }
 
     render(){
-
-        return(
-            <div className='container' style={{width: this.props.width}}>
-                {this.props.tipo == 'projetos' ? '' : this.inserirItem()}
-            </div>
-        )
+        if(this.props.tipo == 'perfil'){
+            return(
+                <div className='container' style={{width: this.props.width}}> 
+                    <Item nome={this.state.perfilItems.login} avatar={this.state.perfilItems.avatar_url} tipo={this.props.tipo}/> 
+                </div>
+            )
+        } else{
+            return(
+                <div className='container' style={{width: this.props.width}}> 
+                    {this.state.projects.map( projects => <Item key={projects.id} projeto={projects.name} desc={projects.description} tipo={this.props.tipo}></Item> )} 
+                </div>
+            )
+        }
+        
     }
 }
