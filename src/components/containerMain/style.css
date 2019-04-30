@@ -2,7 +2,52 @@
     background-color: #fff;
     padding: 10px;
     border: solid 0.5px rgb(212, 212, 212);
-    /* width: 50%; */
     margin: 1%;
     border-radius: 2.5px;
+}
+
+.container:nth-child(2) img{
+    opacity: 0.3;
+    position: relative;
+    left: 25%;
+    top: 15%;
+    border-radius: 5px;
+}
+
+.container p{
+    font-size: 24pt;
+    position: relative;
+    font-weight: bold;
+    z-index: 11;
+    top: 20%;
+    left: 30%;
+}
+
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.search input{
+    padding: 1.5% 2%;
+    margin: 4% 0 4% 1%;
+    width: 40%;
+    border: solid rgba(0, 0, 0, 0.3) 0.2px;
+    font-size: 12pt;
+}
+
+.search input:focus{
+    outline: solid #41a55763 2px;
+}
+
+.search button{
+    padding: 1.5% 2%;
+    border: solid #41a557 1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; 
+    overflow: hidden;  
+    background-color: #289b41; 
+    color: white;
 }

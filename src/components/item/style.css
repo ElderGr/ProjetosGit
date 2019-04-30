@@ -5,7 +5,8 @@
     border: solid 0.1px rgb(221, 220, 220);
     text-align: center;
     background-color: rgb(253, 253, 253);
-    transition: 0.15s all;
+    transition: 0.15s linear;
+    
 }
 
 .items:hover{
@@ -39,3 +40,30 @@
     width: 100%;
     text-align: center;
 }
+
+
+.fadeIn {
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
+    }
+
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; } 
+    }
+    @-moz-keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1; }
+    }
+    @-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    }
+    

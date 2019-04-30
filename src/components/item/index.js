@@ -1,25 +1,25 @@
 import React, {Component} from 'react';
-import Link from '../link/index';
+import Button from '../link/index';
 
 import './style.css';
 
 export default class Item extends Component{
 
     render(){
-        if(this.props.tipo == 'perfil'){
+        if(this.props.tipo === 'perfil'){
             return(
-                <div className='perfil'>
+                <div className='perfil fadeIn '>
                     <img src={this.props.avatar} alt='Avatar'/>
                     <h2>{this.props.nome}</h2>
-                    <Link tipo='logoff' text='Trocar de usuário'/>
+                    <Button tipo='logoff' text='Trocar de usuário'/>
                 </div>
             );
         } else{
             return(
-                <div className='items'>
+                <div className='items fadeIn '>
                     <h2>{this.props.projeto}</h2>
                     <div>{this.props.desc}</div>
-                    <Link tipo='info' text='Info'/>
+                    <Button tipo='info' text='Ver' redirect={this.props.redirect}/>
                 </div>
             );
         }
